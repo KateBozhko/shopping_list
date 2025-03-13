@@ -4,7 +4,7 @@ import imageTwo from './man.jpg'
 
 function App() {
   return (
-    <div>
+    <div className='app'>
       <img src={image} width="300px" alt="shopping"/>
       <h1>Grocery List</h1>
       <img src={imageTwo} width="300px" alt="man"/>
