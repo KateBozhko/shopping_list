@@ -10,8 +10,7 @@ function App() {
       <h1>Grocery List</h1>
       <GroceryList/>
       <img src={imageTwo} width="250px" alt="man"/>
-      <button>Add</button>
-      <button>Delete</button>
+  
     </div>
   );
   
