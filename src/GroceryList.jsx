@@ -11,9 +11,13 @@ onChangeEvent(e) {
     this.setState({userInput: e})
 }
 addItem(input) {
+    if (input === '') {
+        alert("Please, enter an item")
+    } else {
   let listArray = this.state.groceryList;
   listArray.push(input);
   this.setState({groceryList: listArray, userInput: ''})
+}
 }
 crossedWord(event) {
 const li = event.target;
