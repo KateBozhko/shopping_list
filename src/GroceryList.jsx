@@ -24,6 +24,11 @@ const li = event.target;
 li.classList.toggle('crossed');
 }
 
+deleteItem() {
+    let listArray =this.state.groceryList;
+    listArray = [];
+    this.setState({groceryList: listArray})
+}
 
 render() {
      return (
