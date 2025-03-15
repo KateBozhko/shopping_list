@@ -14,10 +14,7 @@ addItem(input) {
   this.setState({groceryList: listArray, userInput: ''})
 }
 
-
-
-
- render() {
+render() {
      return (
          <div>
 <div>
@@ -26,7 +23,14 @@ type="text"
 onChange={(e) => {this.onChangeEvent(e.target.value)}}
 value={this.state.userInput}/>
 </div>
-    <button onClick={() => this.addItem(this.state.userInput)}>Add</button>
+  <div>
+      <button onClick={() => this.addItem(this.state.userInput)}>Add</button>
+  </div>
+  <ul>
+      {this.state.groceryList.map((item, index) => (
+        <li key={index}>{item}</li>  
+      ))}
+  </ul>
     <button onClick={() => this.deleteItem()}>Delete</button>
 </div>
   
