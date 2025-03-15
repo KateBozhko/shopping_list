@@ -30,9 +30,14 @@ deleteItem() {
     this.setState({groceryList: listArray})
 }
 
+onFormSubmit(e) {
+    e.preventDefault();
+}
+
 render() {
      return (
-         <div>
+<div>
+    <form onSubmit={this.onFormSubmit}>
 <div  className="container">
 <input placeholder="What do you want to buy?"
 type="text" 
@@ -45,13 +50,14 @@ value={this.state.userInput}/>
   <ul>
       {this.state.groceryList.map((item, index) => (
         <li onClick={this.crossedWord} key={index}>
-            <img src={imageThree} width='40px'/>
+            <img src={imageThree} width='40px' alt="pictureThree"/>
             {item}</li>  
       ))}
   </ul>
   <div className="container">
     <button onClick={() => this.deleteItem()} className="delete">Delete</button>
   </div>
+  </form>
 </div>
   
      )

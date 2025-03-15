@@ -1,11 +1,13 @@
 body {
-  background-color: #62c2c8;;
+  background-color: #62c2c8;
+  display: flex;
+  justify-content: center;
 }
 .app {
   background-color: white;
   min-height: 80vh;
   width: 400px;
-  margin: 20px auto;
+  margin: 20px;
 }
 
 .crossed {
