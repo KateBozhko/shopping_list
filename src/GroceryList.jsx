@@ -36,7 +36,9 @@ value={this.state.userInput}/>
         <li onClick={this.crossedWord} key={index}>{item}</li>  
       ))}
   </ul>
+  <div>
     <button onClick={() => this.deleteItem()}>Delete</button>
+  </div>
 </div>
   
      )
