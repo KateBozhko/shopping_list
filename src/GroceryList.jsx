@@ -13,6 +13,11 @@ addItem(input) {
   listArray.push(input);
   this.setState({groceryList: listArray, userInput: ''})
 }
+crossedWord(event) {
+const li = event.target;
+li.classList.toggle('crossed')
+}
+
 
 render() {
      return (
@@ -28,7 +33,7 @@ value={this.state.userInput}/>
   </div>
   <ul>
       {this.state.groceryList.map((item, index) => (
-        <li key={index}>{item}</li>  
+        <li onClick={this.crossedWord} key={index}>{item}</li>  
       ))}
   </ul>
     <button onClick={() => this.deleteItem()}>Delete</button>
