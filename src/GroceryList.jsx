@@ -40,7 +40,7 @@ onChange={(e) => {this.onChangeEvent(e.target.value)}}
 value={this.state.userInput}/>
 </div>
   <div className="container">
-      <button onClick={() => this.addItem(this.state.userInput)}>Add</button>
+      <button onClick={() => this.addItem(this.state.userInput)} className="add">Add</button>
   </div>
   <ul>
       {this.state.groceryList.map((item, index) => (
@@ -50,7 +50,7 @@ value={this.state.userInput}/>
       ))}
   </ul>
   <div className="container">
-    <button onClick={() => this.deleteItem()}>Delete</button>
+    <button onClick={() => this.deleteItem()} className="delete">Delete</button>
   </div>
 </div>
   
