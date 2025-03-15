@@ -33,13 +33,13 @@ deleteItem() {
 render() {
      return (
          <div>
-<div>
+<div  className="container">
 <input placeholder="What do you want to buy?"
 type="text" 
 onChange={(e) => {this.onChangeEvent(e.target.value)}}
 value={this.state.userInput}/>
 </div>
-  <div>
+  <div className="container">
       <button onClick={() => this.addItem(this.state.userInput)}>Add</button>
   </div>
   <ul>
@@ -49,7 +49,7 @@ value={this.state.userInput}/>
             {item}</li>  
       ))}
   </ul>
-  <div>
+  <div className="container">
     <button onClick={() => this.deleteItem()}>Delete</button>
   </div>
 </div>

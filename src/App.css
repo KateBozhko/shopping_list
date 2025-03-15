@@ -25,3 +25,8 @@ h1 {
 button, input {
   font-family: "Montserrat", sans-serif;
 }
+
+.container {
+  display: flex;
+  justify-content: center;
+}
