@@ -1,4 +1,6 @@
 import { Component } from "react";
+import imageThree from './bascet.jpg'
+
 
 export class GroceryList extends Component {
  state = {
@@ -15,7 +17,7 @@ addItem(input) {
 }
 crossedWord(event) {
 const li = event.target;
-li.classList.toggle('crossed')
+li.classList.toggle('crossed');
 }
 
 
@@ -33,7 +35,9 @@ value={this.state.userInput}/>
   </div>
   <ul>
       {this.state.groceryList.map((item, index) => (
-        <li onClick={this.crossedWord} key={index}>{item}</li>  
+        <li onClick={this.crossedWord} key={index}>
+            <img src={imageThree} width='40px'/>
+            {item}</li>  
       ))}
   </ul>
   <div>
